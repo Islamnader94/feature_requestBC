@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block title %}
+    <title>Feature Requests</title>
+    {% endblock title %}
+
+    {% block css %}
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    {% endblock css %}
+  </head>
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <br><br>
+      <button class="btn btn-primary center-block" data-toggle="modal" data-target="#add_fr">New Request</button>
+      <br>
+      <button class="btn btn-secondary center-block" onClick="history.go(0)" VALUE="Refresh">Refresh</button>
+      <br><br>
+      </div>
+      {% block content %}
+      {% endblock content %}
+    </div>
+
+    {% block script %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/knockout-3.4.2.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% endblock script %}
+  </body>
+</html>

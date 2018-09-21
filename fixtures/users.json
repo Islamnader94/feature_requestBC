@@ -1,0 +1,10 @@
+[
+  {
+    "table": "user",
+    "records": [
+      { "id": 1, "first_name": "Islam", "last_name": "Nader" },
+      { "id": 2, "first_name": "Mark", "last_name": "Andrea" },
+      { "id": 3, "first_name": "Tim", "last_name": "John" }
+    ]
+  }
+]

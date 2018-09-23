@@ -3,10 +3,6 @@ from datetime import datetime
 
 
 class User(db.Model):
-    """
-    User model to track who added the feature request.
-    """
-
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(60), nullable=False)
     last_name = db.Column(db.String(60))

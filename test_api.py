@@ -18,20 +18,11 @@ class TestAPI(unittest.TestCase):
         response = requests.get('http://127.0.0.1:5000/')
         self.assertEqual(response.status_code, 200)
 
-    def test_add_route(self):
+    def test_users(self):
 
-        response = requests.get('http://127.0.0.1:5000/add')
+        response = requests.get('http://127.0.0.1:5000/users')
         self.assertEqual(response.status_code, 200)
 
-    def test_addrisk_route(self):
-
-        response = requests.get('http://127.0.0.1:5000/addrisk')
-        self.assertEqual(response.status_code, 200)
-
-    def test_review_route(self):
-
-        response = requests.get('http://127.0.0.1:5000/review')
-        self.assertEqual(response.status_code, 200)
 
 
 if __name__ == '__main__':

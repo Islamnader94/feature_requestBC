@@ -10,6 +10,9 @@ function FeatureRequestModel(data) {
     this.updated_on = ko.observable(data.updated_on);
     this.product_area = ko.observable(data.product_area);
 
+/*!
+* fixtures knockoutjs setup
+*/
     this.user_id = ko.observable(data.user_id);
     this.client_id = ko.observable(data.client_id);
     this.product_area_id = ko.observable(data.product_area_id);

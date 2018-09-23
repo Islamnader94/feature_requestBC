@@ -2,12 +2,12 @@ import unittest
 import os
 from flask_testing import TestCase
 from app import app, db
-from models import Risk, Field, create_risk
+from models import User, Client
 
 
 class MyTest(unittest.TestCase):
 
-    SQLALCHEMY_DATABASE_URI = "sqlite:///risks.db"
+    SQLALCHEMY_DATABASE_URI = "sqlite:///features.db"
     TESTING = True
 
     def create_app(self):
@@ -24,19 +24,19 @@ class MyTest(unittest.TestCase):
 
         pass
 
-    def test_risk(self):
+    def test_user(self):
 
-        risk = Risk(name='AutoMobile')
-        db.session.add(risk)
+        user = User(first_name='Islam')
+        db.session.add(user)
         db.session.commit()
-        assert risk.name == 'AutoMobile'
+        assert user.first_name == 'Islam'
 
-    def test_field(self):
+    def test_client(self):
 
-        field = Field(name='BMW', number='5544', date='2018-09-17')
-        db.session.add(field)
+        client = Client(name='Client A')
+        db.session.add(client)
         db.session.commit()
-        assert field.name == 'BMW'
+        assert client.name == 'Client A'
 
 
 if __name__ == '__main__':

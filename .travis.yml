@@ -4,9 +4,7 @@ python:
   - "2.7.12"
 
 install:
-  - pip install -r requirements.txt
-  - pip install flask-marshmallow
-  - pip install flask-fixtures 
+  - pip install -r requirements.txt 
 
 script:
   - python test_base.py -v

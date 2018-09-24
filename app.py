@@ -1,9 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_fixtures import load_fixtures
 from flask_marshmallow import Marshmallow
-import json
-import argparse
-import os
 app = Flask(__name__)
 # Set up the SQLAlchemy Database to be a local file 'features.db'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///features.db'
@@ -11,6 +9,11 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 from views import *
+import os
+import json
+import argparse
+import models
+
 
 description = """Utility function for running various flask commands."""
 

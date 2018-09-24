@@ -9,6 +9,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///features.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 db = SQLAlchemy(app)
+ma = Marshmallow(app)
 from views import *
 
 description = """Utility function for running various flask commands."""

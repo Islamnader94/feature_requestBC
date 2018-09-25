@@ -10,9 +10,9 @@ function FeatureRequestModel(data) {
     this.updated_on = ko.observable(data.updated_on);
     this.product_area = ko.observable(data.product_area);
 
-/*!
-* fixtures knockoutjs setup
-*/
+    /*!
+     * fixtures knockoutjs setup
+     */
     this.user_id = ko.observable(data.user_id);
     this.client_id = ko.observable(data.client_id);
     this.product_area_id = ko.observable(data.product_area_id);
@@ -63,20 +63,19 @@ function FeatureRequestViewModel() {
     });
 
     self.addRequest = function(form_element) {
-        var data = $('#add_fr_form').serializeArray().map(function(x){this[x.name] = x.value; return this;}.bind({}))[0];
+        var data = $('#add_fr_form').serializeArray().map(function(x) { this[x.name] = x.value; return this; }.bind({}))[0];
 
         $.ajax(
-            '/api/feature_requests/add/',
-            {
+            '/api/feature_requests/add/', {
                 contentType: 'application/json;',
                 method: 'POST',
                 data: JSON.stringify(data),
-                success: function (data) {
+                success: function(data) {
                     $('#add_fr').modal('hide');
                     self.featureRequests.push(new FeatureRequestModel(ko.toJS(data['data'][0])));
                     alert(data['message']);
                 },
-                error: function (errors) {
+                error: function(errors) {
                     self.errors(errors.responseJSON.errors);
                 }
             }
@@ -88,24 +87,23 @@ function FeatureRequestViewModel() {
         $('#edit_fr').modal('show');
     }
 
-    self.updateRequest = function(form_element){
-        var data = $('#edit_fr_form').serializeArray().map(function(x){this[x.name] = x.value; return this;}.bind({}))[0];
+    self.updateRequest = function(form_element) {
+        var data = $('#edit_fr_form').serializeArray().map(function(x) { this[x.name] = x.value; return this; }.bind({}))[0];
 
         $.ajax(
-            '/api/feature_requests/' + data.id + '/',
-            {
+            '/api/feature_requests/' + data.id + '/', {
                 contentType: 'application/json;',
                 method: 'POST',
                 data: JSON.stringify(data),
-                success: function (new_data) {
+                success: function(new_data) {
                     $('#edit_fr').modal('hide');
-                    var oldLocation = ko.utils.arrayFirst(self.featureRequests(), function (item) {
+                    var oldLocation = ko.utils.arrayFirst(self.featureRequests(), function(item) {
                         return item.id() == data.id;
                     });
                     self.featureRequests.replace(oldLocation, new FeatureRequestModel(ko.toJS(new_data['data'][0])));
                     alert(new_data['message']);
                 },
-                error: function (errors) {
+                error: function(errors) {
                     self.errors(errors.responseJSON.errors);
                 }
             }

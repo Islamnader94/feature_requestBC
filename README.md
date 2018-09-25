@@ -60,7 +60,7 @@ To run the api test make sure to run the app.py first:
 $ python test_api.py
 ```
 
-To run the server test make sure to run the server.py first:
+To run the server test make sure to run the app.py first:
 
 ```
 $ python test_server.py

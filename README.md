@@ -1,15 +1,15 @@
-### Installing Dependencies
+### Installing Dependencies:
 
 ```
 pip install -r requirements.txt
 ```
-### Entity relationship Diagram
+### Entity relationship Diagram:
 
 ERD-Diagram:
 
 ![Screenshot](ERDFR.png)
 
-### Setting up the App
+### Setting up the App:
 
 To run the app, first run the `create_db` file directly to create the database tables:
 

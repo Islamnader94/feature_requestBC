@@ -20,9 +20,24 @@ class TestAPI(unittest.TestCase):
 
     def test_users(self):
 
-        response = requests.get('http://127.0.0.1:5000/users')
+        response = requests.get('http://127.0.0.1:5000/api/users/')
         self.assertEqual(response.status_code, 200)
 
+    def test_product_areas(self):
+    
+        response = requests.get('http://127.0.0.1:5000/api/product_areas/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_clients(self):
+        
+        response = requests.get('http://127.0.0.1:5000/api/clients/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_feature_requests(self):
+            
+        response = requests.get('http://127.0.0.1:5000/api/feature_requests/')
+        self.assertEqual(response.status_code, 200)
+    
 
 if __name__ == '__main__':
     unittest.main()

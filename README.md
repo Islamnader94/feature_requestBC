@@ -7,14 +7,20 @@ pip install -r requirements.txt
 
 ERD-Diagram:
 
-![Screenshot](ERD.png)
+![Screenshot](ERDFR.png)
 
-### Running the App
+### Setting up the App
 
-To run the app, first run the `models.py` file directly to create the database tables:
+To run the app, first run the `create_db` file directly to create the database tables:
 
 ```
-$ python models.py
+$ python app.py create_db
+```
+
+Then run the init_db to inject fixtures json files directly into the database:
+
+```
+$ python app.py init_db
 ```
 
 ### For pep8 checking:
@@ -35,7 +41,7 @@ $ autopep8 models.py
 To run the app itself:
 
 ```
-$ python app.py
+$ python app.py runserver
 ```
 
 Visit [http://localhost:5000/](http://localhost:5000/) in your browser to see the results.
@@ -63,4 +69,4 @@ $ python test_server.py
 ### Checking the demo:
 To access the demo please visit the link below:
 
-Visit [https://insurance-britecore.herokuapp.com/](https://insurance-britecore.herokuapp.com/) in your browser.
+Visit [https://powerful-tundra-22542.herokuapp.com/](https://powerful-tundra-22542.herokuapp.com/) in your browser.

@@ -2,7 +2,8 @@ from flask import render_template, request, jsonify
 from datetime import datetime
 from app import app
 from models import db, User, Client, ProductArea, FeatureRequest
-from schema import (UserSchema, ClientSchema, ProductAreaSchema, FeatureRequestSchema)
+from schema import (UserSchema, ClientSchema,
+                    ProductAreaSchema, FeatureRequestSchema)
 from utils import fix_client_priorities
 import json
 

@@ -66,7 +66,6 @@ class ProductArea(db.Model):
     __str__ = __repr__
 
 
-
 if __name__ == "__main__":
 
     # Run this file directly to create the database tables.

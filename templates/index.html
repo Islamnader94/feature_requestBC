@@ -1,6 +1,6 @@
 {% extends 'imports.html' %} {% block content %}
 <div class="well clearfix" data-bind="visible: featureRequests().length == 0">
-    <p>No feature requests to show, please create one.</p>
+    <p>No feature requests available, please create one.</p>
 </div>
 
 <div data-bind="foreach: featureRequests ,visible: featureRequests().length > 0">
@@ -21,7 +21,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3>Request new feature</h3>
+                <h3>Request New Feature</h3>
             </div>
 
             <div class="modal-body">
@@ -88,7 +88,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3>Update feature request</h3>
+                <h3>Update Feature Request</h3>
             </div>
 
             <div class="modal-body">

@@ -26,7 +26,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.command == 'runserver':
-        app.run()
+        app.run(host='0.0.0.0')
     elif args.command == 'drop_db':
         models.db.drop_all()
     elif args.command == 'create_db':

@@ -1,3 +1,9 @@
+### This Project is Docker Included
+
+To run docker please check that docker & docker-compose is installed in your machine
+
+Visit [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/) in your browser.
+
 ### Installing Dependencies:
 
 ```
@@ -12,6 +18,10 @@ ERD-Diagram:
 ### Setting up the App:
 
 To run the app, first run the `create_db` file directly to create the database tables:
+
+```
+$ cd web
+```
 
 ```
 $ python app.py create_db
@@ -41,10 +51,29 @@ $ autopep8 models.py
 To run the app itself:
 
 ```
+$ cd web
+```
+
+```
 $ python app.py runserver
 ```
 
 Visit [http://localhost:5000/](http://localhost:5000/) in your browser to see the results.
+
+### Running the app in Docker:
+To run the app using Docker:
+
+```
+$ sudo docker-compose build
+```
+After the build is complete run the following command:
+
+```
+$ sudo docker-compose up
+```
+
+Visit [http://localhost:5000/](http://localhost:5000/) in your browser to see the results.
+
 
 ### Running the tests:
 

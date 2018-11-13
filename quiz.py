@@ -1,0 +1,5 @@
+from cryptography.fernet import Fernet
+key = 'TluxwB3fV_GWuLkR1_BzGs1Zk90TYAuhNMZP_0q4WyM='
+cipher_suite = Fernet(key)
+cipher_text = cipher_suite.decrypt(b"gAAAAABb6xYZB20KSNUZWMDydaq1-q3-P9eemYmAPMnhmNtgFbW3UCkydjlLvgqpBKtiSviN7MiAUNw8xLS6eLTwP7_mb7RibtLIc3JakFaxQ_5Epx_77zu2o0uO5dSGUKc4uCCH81ZnA2Rj9KTD_KXMAFhkt6NsiP61mXKTc63_mxLCbrA_UtiHZ1E33ohc1_j4USnpQATr")
+print(cipher_text)
